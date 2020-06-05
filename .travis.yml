@@ -241,7 +241,7 @@ script:
   # ---------------------------------------------------------------------------
   # Your test script goes here, e.g.
   # - python setup.py test
-  - py.test --flake8 --cov=package_name --cov-report term --cov-report xml --cov-config .coveragerc --junitxml=testresults.xml
+  - py.test --flake8 --cov=raspberrypi_hunter_remote --cov-report term --cov-report xml --cov-config .coveragerc --junitxml=testresults.xml
   # Build the documentation
   - if [[ "$BUILD_DOCS" == "true" ]]; then
       make -C docs html;

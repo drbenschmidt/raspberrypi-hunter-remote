@@ -48,7 +48,7 @@ if extras_require:
 # are installed.
 # https://packaging.python.org/guides/single-sourcing-package-version/
 meta = {}
-exec(read('package_name/__meta__.py'), meta)
+exec(read('raspberrypi_hunter_remote/__meta__.py'), meta)
 
 
 # Import the README and use it as the long-description.

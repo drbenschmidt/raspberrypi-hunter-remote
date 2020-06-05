@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../'))
 
 
-from package_name import __meta__ as meta  # noqa: E402
+from raspberrypi_hunter_remote import __meta__ as meta  # noqa: E402
 
 
 # -- Project information -----------------------------------------------------
