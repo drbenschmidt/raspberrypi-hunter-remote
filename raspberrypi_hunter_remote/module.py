@@ -21,7 +21,7 @@ local_fans = [
 
 @app.route('/', methods=['GET'])
 def home():
-    return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+    return "<h1>raspberrypi-hunter-remote</h1><p>Remember to modify your fans.py!</p>"
 
 @app.route('/fans', methods=['GET'])
 def fans():
@@ -41,6 +41,18 @@ def fans_id(id):
 
 @app.route('/fans/<int:id>', methods=['PATCH'])
 def fans_id_patch(id):
-    return jsonify(request.form)
+    request_data = request.json
 
-app.run()
+    print(request_data)
+
+    # TODO: Validate Request
+
+    if "speed" in request_data:
+        print(f"Setting fan({id}) speed to {request_data['speed']}")
+
+    if "lightToggle" in request_data:
+        print(f"Setting fan({id}) light toggle to {request_data['lightToggle']}")
+
+    return jsonify({ "success": True })
+
+app.run(host='0.0.0.0', port='8083')
